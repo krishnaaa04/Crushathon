@@ -1,0 +1,32 @@
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-animated {
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+  background-size: 200% 200%;
+  animation: gradientAnimation 6s infinite alternate;
+}
+
+.chat-box {
+  width: 180px;
+  height: 60px;
+  clip-path: polygon(50% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.chat-box.active {
+  width: 100%;
+  height: 350px;
+  clip-path: none;
+  overflow-y: auto;
+}
+
+.glow:hover {
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
